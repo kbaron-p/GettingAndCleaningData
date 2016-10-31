@@ -1,3 +1,5 @@
+library(dplyr)
+
 #download files
 url<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 #download.file(url,destfile = "dataset.zip")
@@ -180,6 +182,7 @@ tidy_data_set<-bind_cols(total_acc_x,total_acc_y,total_acc_z,body_acc_x, body_ac
 #create second tidy data set with the average of each variable for each activity and each subject
 gpby_activ_subj<-group_by(tidy_data_set,data_labels, subject_data)
 tidy_data_set_grouped<-summarize_each(gpby_activ_subj, funs=funs(Mean="mean"), vars=c(-data_labels,-subject_data))
+tidy_data_set_grouped<-rename(tidy_data_set_grouped, activity=data_labels, subject_id=subject_data)
 
 #clean up to leave only tidy data sets
 rm(list=setdiff(ls(), c("tidy_data_set","tidy_data_set_grouped")))
