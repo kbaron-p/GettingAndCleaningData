@@ -1,0 +1,291 @@
+---
+title: "CodeBook"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## tidy_data_set_grouped
+
+**activity**                    - string representing one of the six activities performed during experiment:
+                            values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+                            
+
+**subject_id**                  - id of the person performing given actvity in specific moment of the time:
+                            values: integer value in range between 1 and 30
+
+
+**total_acc_x.V1_Mean**         - mean of the acceleration signal from the smartphone accelerometer X axis for 1st reading of the window.
+                            value: In standard gravity units 'g'
+                            
+**total_acc_x.V2_Mean**         - mean of the acceleration signal from the smartphone accelerometer X axis for 2nd reading of the window.
+                            value: In standard gravity units 'g'
+
+****...****                         - as above for readings 3rd till 127th                         
+
+**total_acc_x.V128_Mean**      - mean of the acceleration signal from the smartphone accelerometer X axis for 128th reading of the window.
+                            value: In standard gravity units 'g'
+
+
+**total_acc_y.V1_Mean**         - mean of the acceleration signal from the smartphone accelerometer Y axis for 1st reading of the window.
+                            value: In standard gravity units 'g'
+                            
+**total_acc_y.V2_Mean**         - mean of the acceleration signal from the smartphone accelerometer y axis for 2nd reading of the window.
+                            value: In standard gravity units 'g'
+
+**...**                         - as above for readings 3rd till 127th  
+
+**total_acc_y.V128_Mean**      - mean of the acceleration signal from the smartphone accelerometer y axis for 128th reading of the window.
+                            value: In standard gravity units 'g'
+
+
+**total_acc_z.V1_Mean**         - mean of the acceleration signal from the smartphone accelerometer Z axis for 1st reading of the window.
+                            value: In standard gravity units 'g'
+                            
+**total_acc_z.V2_Mean**         - mean of the acceleration signal from the smartphone accelerometer Z axis for 2nd reading of the window.
+                            value: In standard gravity units 'g'
+
+**...**                         - as above for readings 3rd till 127th  
+
+**total_acc_z.V128_Mean**      - mean of the acceleration signal from the smartphone accelerometer Z axis for 128th reading of the window.
+                            value: In standard gravity units 'g'
+
+
+
+**body_acc_x.V1_Mean**          - mean of the body acceleration X axis signal obtained by subtracting the gravity from the total acceleration X axis 
+                            for 1st reading of the window
+                            value: In standard gravity units 'g'
+                            
+**body_acc_x.V2_Mean**          - mean of the body acceleration X axis signal obtained by subtracting the gravity from the total acceleration X axis 
+                            for 2nd reading of the window
+                            value: In standard gravity units 'g'
+                            
+**...**                         - as above for readings 3rd till 127th  
+
+**body_acc_x.V128_Mean**        - mean of the body acceleration X axis signal obtained by subtracting the gravity from the total acceleration X axis 
+                            for 128th reading of the window
+                            value: In standard gravity units 'g'
+
+**body_acc_y.V1_Mean**          - mean of the body acceleration Y axis signal obtained by subtracting the gravity from the total acceleration Y axis 
+                            for 1st reading of the window
+                            value: In standard gravity units 'g'
+**body_acc_y.V2_Mean**          - mean of the body acceleration Y axis signal obtained by subtracting the gravity from the total acceleration Y axis 
+                            for 2nd reading of the window
+                            value: In standard gravity units 'g'
+                            
+**...**                         - as above for readings 3rd till 127th  
+
+**body_acc_y.V128_Mean**        - mean of the body acceleration Y axis signal obtained by subtracting the gravity from the total acceleration Y axis 
+                            for 128th reading of the window
+                            value: In standard gravity units 'g'
+
+**body_acc_z.V1_Mean**          - mean of the body acceleration Z axis signal obtained by subtracting the gravity from the total acceleration Z axis 
+                            for 1st reading of the window
+                            value: In standard gravity units 'g'
+**body_acc_z.V2_Mean**          - mean of the body acceleration Z axis signal obtained by subtracting the gravity from the total acceleration Z axis 
+                            for 2nd reading of the window
+                            value: In standard gravity units 'g'
+                            
+**...**                         - as above for readings 3rd till 127th  
+
+**body_acc_z.V128_Mean**        - mean of the body acceleration Z axis signal obtained by subtracting the gravity from the total acceleration Z axis 
+                            for 128th reading of the window
+                            value: In standard gravity units 'g'
+
+**body_gyro_x.V1_Mean**         - mean of the angular velocity vector measured by the gyroscope X axis for 1st reading of the window
+                            value: The units are radians/second.
+                            
+**body_gyro_x.V2_Mean**         - mean of the angular velocity vector measured by the gyroscope X axis for 2nd reading of the window
+                            value: The units are radians/second. 
+                            
+**...**                         - as above for readings 3rd till 127th  
+
+**body_gyro_x.V128_Mean**       - mean of the angular velocity vector measured by the gyroscope X axis for 128th reading of the window
+                            value: The units are radians/second.
+
+
+**body_gyro_Y.V1_Mean**         - mean of the angular velocity vector measured by the gyroscope Y axis for 1st reading of the window
+                            value: The units are radians/second. 
+                            
+**body_gyro_Y.V2_Mean**         - mean of the angular velocity vector measured by the gyroscope Y axis for 2nd reading of the window
+                            value: The units are radians/second. 
+                            
+**...**                         - as above for readings 3rd till 127th  
+
+**body_gyro_Y.V128_Mean**       - mean of the angular velocity vector measured by the gyroscope Y axis for 128th reading of the window
+                            value: The units are radians/second.
+
+
+**body_gyro_Z.V1_Mean**         - mean of the angular velocity vector measured by the gyroscope Z axis for 1st reading of the window
+                            value: The units are radians/second. 
+                            
+**body_gyro_Z.V2_Mean**         - mean of the angular velocity vector measured by the gyroscope Z axis for 2nd reading of the window
+                            value: The units are radians/second. 
+                            
+**...**                         - as above for readings 3rd till 127th  
+
+**body_gyro_Z.V128_Mean**       - mean of the angular velocity vector measured by the gyroscope Z axis for 128th reading of the window
+                            value: The units are radians/second.
+
+**tBodyAcc-mean()-X_Mean**      - mean of the mean of time domain signal from accelerometer separated for body acceleration for X axis 
+
+**tBodyAcc-mean()-Y_Mean**      - mean of the mean of time domain signal from accelerometer separated for body acceleration for Y axis  
+
+**tBodyAcc-mean()-Z_Mean**      - mean of the mean of time domain signal from accelerometer separated for body acceleration for Z axis 
+
+
+**tBodyAcc-std()-X_Mean**       - mean of the standard deviation of time domain signal from accelerometer separated for body acceleration for X axis 
+
+**tBodyAcc-std()-Y_Mean**       - mean of the standard deviation of time domain signal from accelerometer separated for body acceleration for Y axis  
+
+**tBodyAcc-std()-Z_Mean**       - mean of the standard deviation of time domain signal from accelerometer separated for body acceleration for Z axis      
+
+
+**tGravityAcc-mean()-X_Mean**   - mean of the mean of time domain signal from accelerometer separated for gravity acceleration for X axis 
+
+**tGravityAcc-mean()-Y_Mean**   - mean of the mean of time domain signal from accelerometer separated for gravity acceleration for Y axis  
+
+**tGravityAcc-mean()-Z_Mean**   - mean of the mean of time domain signal from accelerometer separated for gravity acceleration for Z axis        
+      
+       
+
+**tGravityAcc-std()-X_Mean**    - mean of the standard deviation of time domain signal from accelerometer separated for gravity acceleration for X 
+                              axis 
+
+**tGravityAcc-std()-Y_Mean**    - mean of the standard deviation  of time domain signal from accelerometer separated for gravity acceleration for Y 
+                              axis  
+
+**tGravityAcc-std()-Z_Mean**    - mean of the standard deviation of time domain signal from accelerometer separated for gravity acceleration for Z   
+                              axis                
+        
+
+**tBodyAccJerk-mean()-X_Mean**  - mean of the mean of time domain signal from accelerometer separated for body acceleration for X axis derived in time
+
+**tBodyAccJerk-mean()-Y_Mean**  - mean of the mean of time domain signal from accelerometer separated for body acceleration for Y axis derived in time
+
+**tBodyAccJerk-mean()-Z_Mean**  - mean of the mean of time domain signal from accelerometer separated for body acceleration for Z axis derived in time
+
+
+
+**tBodyAccJerk-std()-X_Mean**   - mean of the standard deviation of time domain signal from accelerometer separated for body acceleration for X axis 
+                              derived in time
+
+**tBodyAccJerk-std()-Y_Mean**   - mean of the standard deviation of time domain signal from accelerometer separated for body acceleration for Y axis 
+                              derived in time
+
+**tBodyAccJerk-std()-Z_Mean**   - mean of the standard deviation  of time domain signal from accelerometer separated for body acceleration for Z axis 
+                              derived in time    
+       
+        
+
+
+**tBodyGyro-mean()-X_Mean**      - mean of the mean of time domain signal from gyrometer separated for body acceleration for X axis 
+
+**tBodyGyro-mean()-Y_Mean**      - mean of the mean of time domain signal from gyrometer separated for body acceleration for Y axis  
+
+**tBodyGyro-mean()-Z_Mean**      - mean of the mean of time domain signal from gyrometer separated for body acceleration for Z axis          
+         
+
+**tBodyGyro-std()-X_Mean**      - mean of the standard deviation of time domain signal from gyrometer separated for body acceleration for X axis 
+
+**tBodyGyro-std()-Y_Mean**      - mean of the standard deviation of time domain signal from gyrometer separated for body acceleration for Y axis  
+
+**tBodyGyro-std()-Z_Mean**      - mean of the standard deviation of time domain signal from gyrometer separated for body acceleration for Z axis
+          
+   
+
+**tBodyGyroJerk-mean()-X_Mean** - mean of the mean of time domain signal from gyrometer separated for body acceleration for X axis derived in time
+
+**tBodyGyroJerk-mean()-Y_Mean** - mean of the mean of time domain signal from gyrometer separated for body acceleration for Y axis derived in time
+
+**tBodyGyroJerk-mean()-Z_Mean** - mean of the mean of time domain signal from gyrometer separated for body acceleration for Z axis derived in time          
+    
+    
+**tBodyGyroJerk-std()-X_Mean**  - mean of the standard deviation of time domain signal from gyrometer separated for body acceleration for X axis 
+                              derived in time
+
+**tBodyGyroJerk-std()-Y_Mean**  - mean of the standard deviation of time domain signal from gyrometer separated for body acceleration for Y axis  
+                              derived in time
+
+**tBodyGyroJerk-std()-Z_Mean**  - mean of the standard deviation of time domain signal from gyrometer separated for body acceleration for Z axis
+                              derived in time    
+      
+  
+
+**tBodyAccMag-mean()_Mean**     - mean of the mean of magnitude of time domain signal from accelerometer separated for body acceleration            
+**tBodyAccMag-std()_Mean**      - mean of the standard deviation of magnitude of time domain signal from accelerometer separated for body acceleration        
+
+**tGravityAccMag-mean()_Mean**  - mean of the mean of magnitude of time domain signal from accelerometer separated for gravity acceleration  
+
+**tGravityAccMag-std()_Mean**   - mean of the standard deviation of magnitude of time domain signal from accelerometer separated for gravity acceleration  
+
+**tBodyAccJerkMag-mean()_Mean** - mean of the mean of the magnitude of time domain signal from accelerometer separated for body acceleration derived 
+                            in time 
+
+**tBodyAccJerkMag-std()_Mean**  - mean of the standard deviation of the magnitude of time domain signal from accelerometer separated for body 
+                            acceleration derived in time
+
+**tBodyGyroMag-mean()_Mean**    - mean of the mean of the magnitude of time domain signal from gyrometer separated for body acceleration   
+
+**tBodyGyroMag-std()_Mean**     - mean of the standard deviation of the magnitude of time domain signal from gyrometer separated for body acceleration   
+
+**tBodyGyroJerkMag-mean()_Mean** -mean of the mean of the magnitude of time domain signal from gyrometer separated for body acceleration derived in 
+                              time 
+
+**tBodyGyroJerkMag-std()_Mean**  -mean of the standard deviation of the magnitude of time domain signal from gyrometer separated for body acceleration                              derived in time 
+
+
+
+**fBodyAcc-mean()-X_Mean**       - Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable   
+
+**fBodyAcc-mean()-Y_Mean**      - Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable           
+
+**fBodyAcc-mean()-Z_Mean**      -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable       
+
+**fBodyAcc-std()-X_Mean**       -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable     
+
+**fBodyAcc-std()-Y_Mean**       -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyAcc-std()-Z_Mean**       -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyAccJerk-mean()-X_Mean**  -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable       
+
+**fBodyAccJerk-mean()-Y_Mean**  -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyAccJerk-mean()-Z_Mean**  -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyAccJerk-std()-X_Mean**   -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable       
+
+**fBodyAccJerk-std()-Y_Mean**   -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyAccJerk-std()-Z_Mean**   -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyGyro-mean()-X_Mean**     -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable       
+
+**fBodyGyro-mean()-Y_Mean**     -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyGyro-mean()-Z_Mean**     -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyGyro-std()-X_Mean**      -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable       
+
+**fBodyGyro-std()-Y_Mean**      -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyGyro-std()-Z_Mean**      -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyAccMag-mean()_Mean**     -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable       
+
+**fBodyAccMag-std()_Mean**      -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable        
+
+**fBodyBodyAccJerkMag-mean()_Mean** -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable     
+
+**fBodyBodyAccJerkMag-std()_Mean**  -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable   
+
+**fBodyBodyGyroMag-mean()_Mean**    -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable   
+
+**fBodyBodyGyroMag-std()_Mean**     -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable    
+
+**fBodyBodyGyroJerkMag-mean()_Mean** -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable   
+
+**fBodyBodyGyroJerkMag-std()_Mean** -Fast Fourier Transform (FFT) applied to corresponding time domain version of the variable   
